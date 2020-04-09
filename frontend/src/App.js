@@ -13,9 +13,9 @@ class App extends Component {
     return (
       <Fragment>
         <Navbar />
-        <Signup />
+        {/* <Signup /> */}
         {/* <Login /> */}
-        {/* <Container /> */}
+        <Container />
       </Fragment>
     )
   }
