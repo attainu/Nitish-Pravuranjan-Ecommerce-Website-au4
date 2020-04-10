@@ -6,9 +6,9 @@ class Signup extends Component {
         render() {
                 return (
                         
-	<div>
+	<div class="container-fluid">
 	<div className="login-div">
-	<div className="title">YourShop</div>
+	<div className="title">Signup</div>
 	<div className="fields">
 			
 		<div className="username">
@@ -39,7 +39,7 @@ class Signup extends Component {
 		</div>
 	</div>
 
-      		<button className="signin-button">Login</button>
+      		<button className="signin-button">Signup</button>
       			<div className="link">
         		<a href="#">Forgot password?</a> or <a href="#">Sign up</a>
       			</div>

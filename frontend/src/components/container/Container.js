@@ -9,12 +9,10 @@ class Container extends Component {
       <h1>Original Shoes</h1>
       <p>Lorem ipsum dolor sit amet</p>
       <div className="product-pic"></div>
-      <div className="product-colors">
-        <span className="blue active" data-color="#7ed6df" data-pic="url(1.png)"></span>
-      </div>
       <div className="product-info">
         <div className="product-price">$90</div>
-        <a href="#" className="product-button">Add to Cart</a>
+        <input type="submit" className="product-button" value="Add to Cart" />
+        {/* <input type="button" id="cart-button" className="hidden" /> */}
       </div>
     </div>
                         </div>

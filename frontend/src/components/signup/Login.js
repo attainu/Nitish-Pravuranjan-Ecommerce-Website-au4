@@ -5,9 +5,9 @@ import './../Css/Signup.css';
 class Login extends Component {
         render() {
                 return (
-                        <div>
+                        <div class="container-fluid">
 	<div className="login-div">
-	<div className="title">YourShop</div>
+	<div className="title">Login</div>
 	<div className="fields">
 			
 		<div className="username">
