@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Form } from 'react-bootstrap';
 import './../Css/Signup.css';
 
 class Login extends Component {
   render() {
     return (
-      <div class='container-fluid'>
+      <div className='container-fluid'>
         <div className='login-div'>
           <div className='title'>Login</div>
           <div className='fields'>
@@ -41,7 +40,8 @@ class Login extends Component {
 
           <button className='signin-button'>Login</button>
           <div className='link'>
-            <Link to='#'>Forgot Password</Link> or <Link to='/'>SignUp</Link>
+            <Link to='#'>Forgot Password</Link> or
+            <Link to='/signup'>SignUp</Link>
           </div>
         </div>
       </div>
