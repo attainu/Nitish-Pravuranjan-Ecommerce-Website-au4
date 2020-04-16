@@ -1,21 +1,150 @@
 
-* {
-  box-sizing: border-box;
+.loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+.navbar-brand {
+        font-weight: bold;
+        font-family: cursive;       
+}
+.navbar-text {
+        text-decoration: none !important;
+        color: black !important;
+}
+.navbar-text:hover {
+        background: #ee0979;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        
+         -webkit-background-clip: text !important;
+         -webkit-text-fill-color: transparent !important;
+}
+.navbar-items {
+        font-weight: 700;
+        font-family: cursive;
+        text-transform: uppercase;
+        color: black !important;
+}
+.navbar-icon:hover {
+        color: #ee0979 !important;
+}
+.inputfield-signup {
+        border-radius: 30px;
+        box-shadow: inset 4px 4px 4px #cbced1,
+                    inset -10px -10px 10px #ffffff;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: SourceSansPro-Regular, sans-serif, Poppins;
-  background: #E2E2E2;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  background-size: cover;
-  z-index: 1;
+.signup-card {
+        border-radius: 10px;
+        box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
 }
+
+.account-btn {
+        outline: none;
+        border:none;
+        width:40%;
+        padding:6px 6px 6px 6px;
+        border-radius: 30px;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'Lato', sans-serif;
+        color:#fff;
+        text-align: center;
+        background: #ee0979;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        box-shadow: 3px 3px 8px #b1b1b1,
+                    -3px -3px 8px #ffffff;
+        transition: 0.5s;
+        display: block; 
+        margin: 0 auto;
+}
+.account-btn:hover {
+        background: #FF512F;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.account-btn:active {
+        background: #FF512F;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.account-route-text {
+        font-weight: 500;
+        text-decoration: none !important;
+        background: #396afc;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+}
+
+.account-route-text:hover {
+        background: #FF512F;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+}
+
+.product-button{
+        outline: none;
+        border:none;
+        width:40%;
+        padding:6px 6px 6px 6px;
+        border-radius: 30px;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'Lato', sans-serif;
+        color: #272323;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        background: #e65c00;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        
+        box-shadow: inset 8px 8px 8px #F9D423,
+        inset -8px -8px 8px #e65c00;
+        text-decoration: none;
+        border-radius: 30px;
+        transition: .4s linear;
+      }
+      
+.product-button:hover{
+        transform: scale(1.06);
+        text-decoration: none;
+        color: #272323;
+        border: none;
+        background: #e65c00;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        box-shadow: inset 8px 8px 8px #F9D423,
+        inset -8px -8px 8px #e65c00;
+        
+      }
+.product-button:active {
+        color: #272323;
+        border: none;
+        text-decoration: none;
+        background: #e65c00;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        box-shadow: inset 8px 8px 8px #F9D423,
+        inset -8px -8px 8px #e65c00;
+        
+      }
+      
