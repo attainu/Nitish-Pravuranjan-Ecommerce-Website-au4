@@ -8,18 +8,16 @@ const { check, validationResult } = require('express-validator');
 router.post(
   '/',
   [
-    check('name', 'Name should not be empty')
-      .not()
-      .isEmpty(),
+    check('name', 'Name should not be empty').not().isEmpty(),
     check('email', 'Please include a valid email').isEmail(),
     check(
       'password',
-      'password should contain atleast six characters'
-    ).isLength({ min: 6 })
+      'Password should contain atleast six characters'
+    ).isLength({ min: 6 }),
   ],
   async (req, res) => {
     const errors = validationResult(req);
-    errors.array().forEach(i => {
+    errors.array().forEach((i) => {
       delete i.value;
     });
     if (!errors.isEmpty()) {
@@ -36,7 +34,7 @@ router.post(
       user = new User({
         name,
         email,
-        password
+        password,
       });
 
       const salt = await bcrypt.genSalt(10);
@@ -46,8 +44,8 @@ router.post(
 
       const payload = {
         user: {
-          id: user.id
-        }
+          id: user.id,
+        },
       };
 
       jwt.sign(

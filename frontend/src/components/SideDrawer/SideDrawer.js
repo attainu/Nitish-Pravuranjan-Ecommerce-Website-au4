@@ -1,15 +1,17 @@
 import React from 'react';
 import './SideDrawer.css';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { logout } from '../../Redux/actions/auth';
 
-function SideDrawer(props) {
-  let drawerClasses = 'sideDrawer';
-  if (props.show) {
-    drawerClasses = 'sideDrawer open';
-  }
-  return (
-    <nav className={drawerClasses}>
+function SideDrawer({ show, logout, auth: { isAuthenticated } }) {
+  let links;
+  if (!isAuthenticated) {
+    links = (
       <ul>
+        <Link to='/cart'>
+          <li>Cart</li>
+        </Link>
         <Link to='/signup'>
           <li>SignUp</li>
         </Link>
@@ -17,8 +19,27 @@ function SideDrawer(props) {
           <li>Login</li>
         </Link>
       </ul>
-    </nav>
-  );
+    );
+  } else {
+    links = (
+      <ul>
+        <Link to='/cart'>
+          <li>Cart</li>
+        </Link>
+        <Link to='/' onClick={logout}>
+          <li>Logout</li>
+        </Link>
+      </ul>
+    );
+  }
+  let drawerClasses = 'sideDrawer';
+  if (show) {
+    drawerClasses = 'sideDrawer open';
+  }
+  return <nav className={drawerClasses}>{links}</nav>;
 }
 
-export default SideDrawer;
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+export default connect(mapStateToProps, { logout })(SideDrawer);

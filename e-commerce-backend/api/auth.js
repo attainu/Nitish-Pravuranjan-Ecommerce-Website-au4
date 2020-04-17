@@ -25,15 +25,18 @@ router.post(
   '/',
   [
     check('email', 'Please include a valid email').isEmail(),
-    check('password', 'password should contain atleast six characters').exists()
+    check(
+      'password',
+      'password should contain atleast six characters'
+    ).exists(),
   ],
   async (req, res) => {
     const errors = validationResult(req);
-    errors.array().forEach(i => {
+    errors.array().forEach((i) => {
       delete i.value;
     });
     if (!errors.isEmpty()) {
-      return res.status('400').json({ errors: errors.array() });
+      return res.status(400).json({ errors: errors.array() });
     }
 
     const { email, password } = req.body;
@@ -41,19 +44,23 @@ router.post(
     try {
       let user = await User.findOne({ email });
       if (!user) {
-        return res.json({ errors: [{ msg: 'Invalid credentials!' }] });
+        return res
+          .status(400)
+          .json({ errors: [{ msg: 'Invalid credentials!' }] });
       }
 
       const isMatch = await bcrypt.compare(password, user.password);
 
       if (!isMatch) {
-        return res.json({ errors: [{ msg: 'Invalid credentials!' }] });
+        return res
+          .status(400)
+          .json({ errors: [{ msg: 'Invalid credentials!' }] });
       }
 
       const payload = {
         user: {
-          id: user.id
-        }
+          id: user.id,
+        },
       };
 
       jwt.sign(

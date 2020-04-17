@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
   const token = req.header('x-auth-token');
 
   if (!token) {
-    return res.send(401).json({ msg: 'No token, authorization denied' });
+    return res.sendStatus(401).json({ msg: 'No token, authorization denied' });
   }
   try {
     const decoded = jwt.verify(token, secret);
@@ -13,6 +13,6 @@ module.exports = (req, res, next) => {
 
     next();
   } catch (error) {
-    res.status(401).json({ msg: 'token invalid' });
+    res.sendStatus(401).json({ msg: 'token invalid' });
   }
 };
