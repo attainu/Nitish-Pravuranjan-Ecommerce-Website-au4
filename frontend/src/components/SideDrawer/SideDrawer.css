@@ -1,0 +1,46 @@
+.sideDrawer {
+  height: 100%;
+  background: white;
+  box-shadow: 1px 0 7px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 70%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+.sideDrawer.open {
+  transform: translateX(0);
+}
+
+.sideDrawer ul {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sideDrawer li {
+  margin: 0.5rem 0;
+}
+
+.sideDrawer a {
+  color: rgba(18, 7, 63, 0.979);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.sideDrawer a:hover,
+.sideDrawer a:active {
+  color: rgb(76, 219, 76);
+}
+
+@media (min-width: 769px) {
+  .sideDrawer {
+    display: none;
+  }
+}

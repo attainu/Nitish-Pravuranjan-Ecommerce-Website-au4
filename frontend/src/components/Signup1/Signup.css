@@ -1,0 +1,4 @@
+.form-group.links a:hover,
+.form-group.links a:active {
+  text-decoration: none;
+}
