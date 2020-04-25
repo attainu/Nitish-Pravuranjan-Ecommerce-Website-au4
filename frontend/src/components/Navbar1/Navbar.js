@@ -10,15 +10,14 @@ const Navbar = ({ onClick, logout, auth: { isAuthenticated } }) => {
   if (!isAuthenticated) {
     links = (
       <ul>
-       
+        <Link to='/cart'>
+          <li>Cart</li>
+        </Link>
         <Link to='/signup'>
           <li>SignUp</li>
         </Link>
         <Link to='/login'>
           <li>Login</li>
-        </Link>
-        <Link to='/cart'>
-          <li>Cart</li>
         </Link>
       </ul>
     );

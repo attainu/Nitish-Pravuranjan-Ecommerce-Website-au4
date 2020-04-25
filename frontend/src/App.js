@@ -38,7 +38,7 @@ class App extends Component {
     this.wait(1500);
     store.dispatch(loadUser());
   };
-
+  
   drawerToggleHandler = () => {
     this.setState((prevState) => {
       return { sideDrawerOpen: !prevState.sideDrawerOpen };
@@ -51,12 +51,10 @@ class App extends Component {
 
   render() {
     if (this.state.loading) return <Loader />;
-    
     let backdrop = null;
     if (this.state.sideDrawerOpen) {
       backdrop = <Backdrop onClick={this.backdropClickHandler} />;
     }
-   
     return (
       <Fragment>
         <Router>
