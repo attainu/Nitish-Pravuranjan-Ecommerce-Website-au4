@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Card, Form, Container, Row, Button } from 'react-bootstrap';
@@ -63,6 +64,7 @@ function Login({ login, isAuthenticated }) {
                 Submit
               </Button>
             </Form>
+            <Card.Text className="pt-4 text-center "><Link className="account-route-text" to='/Signup'>New to Oliver? Create an account</Link></Card.Text>
           </Card.Body>
         </Card>
       </Row>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Card, Form, Container, Row, Button } from 'react-bootstrap';
@@ -92,6 +93,7 @@ function Signup({ setAlert, register, isAuthenticated }) {
                 Submit
               </Button>
             </Form>
+            <Card.Text className="pt-3 text-center "><Link className="account-route-text" to='/Login'>Existing User? login here</Link></Card.Text>
           </Card.Body>
         </Card>
       </Row>
