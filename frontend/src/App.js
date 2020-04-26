@@ -1,8 +1,7 @@
 import React, { Fragment, Component } from 'react';
-import Signup from './components/Signup1/Signup.js';
-import Login from './components/Signup1/Login.js';
-import Navbar from './components/Navbar1/Navbar';
-import Container from './components/container/Product.js';
+import Signup from './components/Signup/Signup.js';
+import Login from './components/Signup/Login.js';
+import Navbar from './components/Navbar/Navbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import Alert from './components/Alert/Alert';
@@ -14,7 +13,8 @@ import { loadUser } from './Redux/actions/auth';
 import store from './Redux/store.js';
 import Loader from './components/Loader/Loader.js';
 import Landing from './components/container/Landing.js';
-import Product from './components/container/Product.js';
+import ProductList from './components/container/ProductList.js';
+import Details from './components/container/Details.js';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -24,21 +24,21 @@ class App extends Component {
     sideDrawerOpen: false,
     loading: true,
   };
-  sleep = milliseconds => {
-    return new Promise(resolve => setTimeout(resolve, milliseconds));
+  sleep = (milliseconds) => {
+    return new Promise((resolve) => setTimeout(resolve, milliseconds));
   };
   wait = async (milliseconds = 1500) => {
     await this.sleep(milliseconds);
     this.setState({
-      loading: false
+      loading: false,
     });
   };
 
   componentDidMount = () => {
-    this.wait(1500);
     store.dispatch(loadUser());
+    this.wait(1500);
   };
-  
+
   drawerToggleHandler = () => {
     this.setState((prevState) => {
       return { sideDrawerOpen: !prevState.sideDrawerOpen };
@@ -68,6 +68,8 @@ class App extends Component {
               <Route path='/signup' component={Signup} />
               <Route path='/login' component={Login} />
               <Route path='/cart' component={Cart} />
+              <Route path='/product' component={ProductList} />
+              <Route path='/:productId' component={Details} />
             </Switch>
           </main>
         </Router>

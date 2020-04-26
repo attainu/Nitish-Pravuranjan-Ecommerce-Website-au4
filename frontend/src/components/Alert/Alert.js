@@ -7,6 +7,7 @@ const Alert = ({ alerts }) =>
     <div
       key={alert.id}
       className={`alert alert-${alert.alertType} text-center`}
+      style={{ zIndex: 200 }}
     >
       {alert.msg}
     </div>
