@@ -24,7 +24,7 @@ function Login({ login, isAuthenticated }) {
   }
   return (
     <Container fluid>
-      <Row className='mx-auto justify-content-center p-5 ' xs>
+      <Row className='mx-auto justify-content-center pt-5 ' xs>
         <Card className='signup-card '>
           <Card.Body>
             <Card.Title className='py-3 text-center font-weight-bold'>
