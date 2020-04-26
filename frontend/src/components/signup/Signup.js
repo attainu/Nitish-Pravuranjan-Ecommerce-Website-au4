@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Card, Form, Container, Row, Button } from 'react-bootstrap';
 import { setAlert } from '../../Redux/actions/alert';

@@ -6,9 +6,9 @@
 body, html {
  
   font-family: SourceSansPro-Regular, sans-serif, Poppins;
-  background: #E2E2E2;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #D3CCE3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   background-repeat: repeat;
   background-position: center;
@@ -98,3 +98,53 @@ body, html {
 }
 
 /* ----------******---------- */
+
+/* --------Back Icon-------- */
+
+.backText {
+  text-decoration: none !important;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  color: black !important;
+
+}
+.backIcon {
+  font-size: 40px;
+}
+
+/* ---------******--------- */
+
+/* ------Add to Cart------ */
+
+.Add-cart-btn {
+  outline: none;
+  border:none;
+  width:50%;
+  padding:5px 5px 5px 5px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  color:#fff;
+  text-align: center;
+  transition: 0.5s;
+  display: block; 
+  margin: 0 auto;
+  background: #00b09b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 3px 3px 8px #b1b1b1,
+              -3px -3px 8px #ffffff;
+}
+.Add-cart-btn:hover {
+  background: #96c93d;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00b09b, #96c93d);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00b09b, #96c93d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.Add-cart-icon {
+  font-size: 25px;
+  margin-right: 0.5em;
+}
+
+/* ---------*****--------- */

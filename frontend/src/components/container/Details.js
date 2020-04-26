@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import {IoIosArrowBack} from 'react-icons/io';
+import {FaCartPlus} from 'react-icons/fa';
 class Details extends Component {
   state = {
     product: null,
@@ -24,7 +26,13 @@ class Details extends Component {
         inCart,
       } = this.state.product;
       return (
+        <div>
+          <div className='container-fluid p-5'>
+            <Link to='/product' className="backText"><IoIosArrowBack className="backIcon"/>Back</Link>
+          </div>
+                
         <div className='container'>
+        
           <div className='row'>
             <div className='col-10 mx-auto col-md-6 my-3'>
               <img src={productPic[0].img} className='img-fluid' alt='' />
@@ -47,23 +55,22 @@ class Details extends Component {
 
               {/* buttons */}
               <div className='mt-4'>
-                <Link to='/product'>
-                  <button className='btn btn-outline-dark mr-2'>
-                    Back to products
-                  </button>
-                </Link>
+                
 
                 <button
+                  className= "Add-cart-btn Add-card-text"
                   disabled={inCart ? true : false}
                   onClick={() => {
                     console.log('clicked');
                   }}
                 >
+                  <FaCartPlus className="Add-cart-icon"/>
                   {inCart ? 'in cart' : 'add to cart'}
                 </button>
               </div>
             </div>
           </div>
+        </div>
         </div>
       );
     }

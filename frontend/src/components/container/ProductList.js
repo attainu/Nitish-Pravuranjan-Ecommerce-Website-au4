@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getProducts } from '../../Redux/actions/product';
 import Product from './Product.js';
@@ -9,8 +9,8 @@ class ProductList extends Component {
   }
   render() {
     return (
-      <div className='container'>
-        <h1 className='text-center'>Our Products</h1>
+      <div className='container p-5'>
+        <h3 className='text-center'>Our Products</h3>
         <div className='row'>
           {this.props.products &&
             this.props.products.map((product) => {

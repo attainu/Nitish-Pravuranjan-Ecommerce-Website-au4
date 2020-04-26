@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Carousel } from 'react-bootstrap';
+import ProductList from './ProductList.js';
 
 export default class Landing extends Component {
   render() {
@@ -41,6 +42,7 @@ export default class Landing extends Component {
             </Carousel.Item>
           </Carousel>
         </Container>
+        <ProductList />
       </div>
     );
   }
