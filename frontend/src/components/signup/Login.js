@@ -64,7 +64,12 @@ function Login({ login, isAuthenticated }) {
                 Submit
               </Button>
             </Form>
-            <Card.Text className="pt-4 text-center "><Link className="account-route-text" to='/Signup'>New to Oliver? Create an account</Link></Card.Text>
+            <Card.Text className='pt-4 text-center '>
+              <Link className='account-route-text' to='/Signup'>
+                {' '}
+                Create an account
+              </Link>
+            </Card.Text>
           </Card.Body>
         </Card>
       </Row>

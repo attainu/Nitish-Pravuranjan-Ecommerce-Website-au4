@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react';
-import Signup from './components/signup/Signup.js';
-import Login from './components/signup/Login.js';
-import Navbar from './components/navbar/Navbar';
+import Signup from './components/Signup/Signup.js';
+import Login from './components/Signup/Login.js';
+import Navbar from './components/Navbar/Navbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import Alert from './components/Alert/Alert';
@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { setAuthToken } from './utils/setAuthToken';
 import { loadUser } from './Redux/actions/auth';
+import { getProducts } from './Redux/actions/product';
 import store from './Redux/store.js';
 import Loader from './components/Loader/Loader.js';
 import Landing from './components/container/Landing.js';
@@ -36,6 +37,7 @@ class App extends Component {
 
   componentDidMount = () => {
     store.dispatch(loadUser());
+    store.dispatch(getProducts());
     this.wait(1500);
   };
 

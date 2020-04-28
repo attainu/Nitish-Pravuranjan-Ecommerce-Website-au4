@@ -25,8 +25,8 @@ const Navbar = ({ onClick, logout, auth: { isAuthenticated, user } }) => {
             id='dropdown-basic-button'
             title='Welcome!'
           >
-            <Dropdown.Item><Link to='/signup'>Signup</Link></Dropdown.Item>
-            <Dropdown.Item><Link to='/login'>Login</Link></Dropdown.Item>
+            <Dropdown.Item href='/signup'>Signup</Dropdown.Item>
+            <Dropdown.Item href='/login'>Login</Dropdown.Item>
           </DropdownButton>
         </div>
       </div>

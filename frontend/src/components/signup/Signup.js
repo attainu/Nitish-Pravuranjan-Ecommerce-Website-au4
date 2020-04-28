@@ -40,7 +40,7 @@ function Signup({ setAlert, register, isAuthenticated }) {
               SignUp
             </Card.Title>
             <Form onSubmit={(e) => onSubmit(e)}>
-              <Form.Group controlId='formBasicEmail'>
+              <Form.Group>
                 <Form.Label className='font-weight-bold'>Username</Form.Label>
                 <Form.Control
                   type='username'
@@ -51,7 +51,7 @@ function Signup({ setAlert, register, isAuthenticated }) {
                 />
               </Form.Group>
 
-              <Form.Group controlId='formBasicEmail'>
+              <Form.Group>
                 <Form.Label className='font-weight-bold'>
                   Email address
                 </Form.Label>
@@ -78,7 +78,7 @@ function Signup({ setAlert, register, isAuthenticated }) {
                 />
               </Form.Group>
 
-              <Form.Group controlId='formBasicPassword'>
+              <Form.Group controlId='formBasicPassword2'>
                 <Form.Label className='font-weight-bold'>Password</Form.Label>
                 <Form.Control
                   type='password'
@@ -93,7 +93,11 @@ function Signup({ setAlert, register, isAuthenticated }) {
                 Submit
               </Button>
             </Form>
-            <Card.Text className="pt-3 text-center "><Link className="account-route-text" to='/Login'>Existing User? login here</Link></Card.Text>
+            <Card.Text className='pt-3 text-center '>
+              <Link className='account-route-text' to='/Login'>
+                Existing User? login here
+              </Link>
+            </Card.Text>
           </Card.Body>
         </Card>
       </Row>

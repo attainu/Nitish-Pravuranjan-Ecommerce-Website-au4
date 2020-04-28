@@ -1,4 +1,4 @@
-import { GET_PRODUCTS } from './types';
+import { GET_PRODUCTS, UPDATE_PRODUCT } from './types';
 import { setAlert } from './alert';
 import Axios from 'axios';
 export const getProducts = () => async (dispatch) => {
@@ -14,4 +14,11 @@ export const getProducts = () => async (dispatch) => {
       errors.forEach((err) => dispatch(setAlert(err.msg, 'danger')));
     }
   }
+};
+
+export const updateProduct = (product) => (dispatch) => {
+  dispatch({
+    type: UPDATE_PRODUCT,
+    payload: product,
+  });
 };

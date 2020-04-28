@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getProducts } from '../../Redux/actions/product';
 import Product from './Product.js';
 
 class ProductList extends Component {
-  componentDidMount() {
-    this.props.getProducts();
-  }
   render() {
     return (
       <div className='container p-5'>
@@ -24,4 +20,4 @@ class ProductList extends Component {
 const mapStateToProps = (state) => ({
   products: state.products,
 });
-export default connect(mapStateToProps, { getProducts })(ProductList);
+export default connect(mapStateToProps)(ProductList);
