@@ -2,12 +2,18 @@ import React, { Fragment, Component } from 'react';
 import CartItem from './CartItem';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PaypalButton from './PaypalBtn';
+import { clearCart } from '../../Redux/actions/cart';
 
 class Cart extends Component {
   render() {
     if (!this.props.isAuthenticated) {
       return <Redirect to='/login' />;
     }
+    let total = this.props.cartItems.reduce(
+      (total, item) => total + item.total,
+      0
+    );
     return (
       <section>
         {this.props.cartItems.length > 0 && (
@@ -39,13 +45,17 @@ class Cart extends Component {
                 this.props.cartItems.map((item) => (
                   <CartItem key={item._id} item={item} />
                 ))}
-              <h3 className='text-right'>
-                Total: $
-                {this.props.cartItems.reduce(
-                  (total, item) => total + item.total,
-                  0
-                )}
-              </h3>
+            </div>
+            <div className='container-fluid'>
+              <div className='row'>
+                <div className='col-lg-2 mx-auto col-md-6 col-10 mr-lg-0 text-center'>
+                  <h3>Total: ${total}</h3>
+                  <PaypalButton
+                    total={total}
+                    clearCart={this.props.clearCart}
+                  />
+                </div>
+              </div>
             </div>
           </Fragment>
         )}
@@ -65,4 +75,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(Cart);
+export default connect(mapStateToProps, { clearCart })(Cart);

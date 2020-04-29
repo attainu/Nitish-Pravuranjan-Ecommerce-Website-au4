@@ -3,6 +3,7 @@ import {
   INCREMENT,
   DECREMENT,
   REMOVE_ITEM,
+  CLEAR_CART,
 } from '../actions/types';
 
 export default (state = [], action) => {
@@ -48,6 +49,10 @@ export default (state = [], action) => {
       index = stateCopy.indexOf(selectedProduct);
       stateCopy.splice(index, 1);
       localStorage.setItem('cartItems', JSON.stringify(stateCopy));
+      return stateCopy;
+    case CLEAR_CART:
+      stateCopy = [];
+      localStorage.removeItem('cartItems');
       return stateCopy;
     default:
       return stateCopy;

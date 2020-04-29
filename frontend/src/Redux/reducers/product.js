@@ -4,6 +4,7 @@ import {
   REMOVE_ITEM,
   DECREMENT,
   USER_LOADED,
+  CLEAR_CART,
 } from '../actions/types';
 
 export default (state = [], action) => {
@@ -23,6 +24,7 @@ export default (state = [], action) => {
     case REMOVE_ITEM:
     case DECREMENT:
     case USER_LOADED:
+    case CLEAR_CART:
       setTimeout(() => {
         let cartItems = localStorage.getItem('cartItems')
           ? JSON.parse(localStorage.getItem('cartItems'))
