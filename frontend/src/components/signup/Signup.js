@@ -32,8 +32,8 @@ function Signup({ setAlert, register, isAuthenticated }) {
     return <Redirect to='/cart' />;
   }
   return (
-    <Container fluid>
-      <Row className='mx-auto justify-content-center pt-5' xs>
+    <Container fluid >
+      <Row className='mx-auto justify-content-center pt-5 ' xs>
         <Card className='signup-card '>
           <Card.Body>
             <Card.Title className='text-center font-weight-bold'>

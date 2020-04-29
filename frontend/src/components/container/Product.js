@@ -10,7 +10,7 @@ class Product extends Component {
     let { _id, name, productPic, price, inCart } = this.props.product;
     return (
       <ProductWrapper className='col-sm-9 mx-auto col-md-6 col-lg-3 my-3'>
-        <div className='card'>
+        <div className=' product-card card '>
           <div className='img-container p-5'>
             <Link to={`/${_id}`}>
               <img src={productPic[0].img} alt='' className='card-img-top' />
@@ -47,19 +47,18 @@ class Product extends Component {
 
 const ProductWrapper = styled.div`
   .card {
-    border-color: transparent;
     transition: all 1s linear;
     border-radius: 10px;
+    background: #ffffff;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-      0 100px 80px rgba(0, 0, 0, 0.12);
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
   }
   .card-footer {
     font-size: 18px;
     font-weight: 700;
     font-family: 'Lato', sans-serif;
-    color: #000000;
     background: transparent;
     border-top: transparent;
     transition: all 1s linear;
