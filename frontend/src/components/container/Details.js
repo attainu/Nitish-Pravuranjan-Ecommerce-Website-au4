@@ -30,7 +30,7 @@ class Details extends Component {
       return (
         <div>
           <div className='container-fluid p-5'>
-            <Link to='/product' className='backText'>
+            <Link to='/' className='backText'>
               <IoIosArrowBack className='backIcon' />
               Back
             </Link>

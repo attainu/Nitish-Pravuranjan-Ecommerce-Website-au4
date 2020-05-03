@@ -13,9 +13,9 @@ import { loadUser } from './Redux/actions/auth';
 import { getProducts } from './Redux/actions/product';
 import store from './Redux/store.js';
 import Loader from './components/Loader/Loader.js';
-import Landing from './components/container/Landing.js';
 import ProductList from './components/container/ProductList.js';
 import Details from './components/container/Details.js';
+import Orders from './components/Orders/OrderHistory';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -66,11 +66,11 @@ class App extends Component {
           <main style={{ height: '90%', marginTop: '10vh' }}>
             <Alert />
             <Switch>
-              <Route exact path='/' component={Landing} />
+              <Route exact path='/' component={ProductList} />
               <Route path='/signup' component={Signup} />
               <Route path='/login' component={Login} />
               <Route path='/cart' component={Cart} />
-              <Route path='/product' component={ProductList} />
+              <Route path='/orders' component={Orders} />
               <Route path='/:productId' component={Details} />
             </Switch>
           </main>

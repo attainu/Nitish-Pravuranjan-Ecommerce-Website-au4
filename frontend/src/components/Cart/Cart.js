@@ -4,10 +4,12 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PaypalButton from './PaypalBtn';
 import { clearCart } from '../../Redux/actions/cart';
+import { postOrder } from '../../Redux/actions/orders';
 
 class Cart extends Component {
   render() {
     if (!this.props.isAuthenticated) {
+      this.props.history.push('/cart');
       return <Redirect to='/login' />;
     }
     let total = this.props.cartItems.reduce(
@@ -53,6 +55,7 @@ class Cart extends Component {
                   <PaypalButton
                     total={total}
                     clearCart={this.props.clearCart}
+                    postOrder={this.props.postOrder}
                   />
                 </div>
               </div>
@@ -75,4 +78,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { clearCart })(Cart);
+export default connect(mapStateToProps, { clearCart, postOrder })(Cart);

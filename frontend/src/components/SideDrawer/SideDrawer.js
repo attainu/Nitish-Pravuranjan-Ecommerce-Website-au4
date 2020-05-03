@@ -9,11 +9,11 @@ function SideDrawer({ show, logout, auth: { isAuthenticated } }) {
   if (!isAuthenticated) {
     links = (
       <ul>
-        <Link to='/product'>
-          <li>Products</li>
-        </Link>
         <Link to='/cart'>
           <li>Cart</li>
+        </Link>
+        <Link to='/orders'>
+          <li>Orders</li>
         </Link>
         <Link to='/signup'>
           <li>SignUp</li>
@@ -26,11 +26,11 @@ function SideDrawer({ show, logout, auth: { isAuthenticated } }) {
   } else {
     links = (
       <ul>
-        <Link to='/product'>
-          <li>Products</li>
-        </Link>
         <Link to='/cart'>
           <li>Cart</li>
+        </Link>
+        <Link to='/orders'>
+          <li>Orders</li>
         </Link>
         <Link to='/' onClick={logout}>
           <li>Logout</li>

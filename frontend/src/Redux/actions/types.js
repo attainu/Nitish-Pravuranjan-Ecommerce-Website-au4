@@ -14,3 +14,5 @@ export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 export const REMOVE_ITEM = 'REMOVE_ITEM';
 export const CLEAR_CART = 'CLEAR_CART';
+export const GET_ORDER_HISTORY = 'GET_ORDER_HISTORY';
+export const POST_ORDER = 'POST_ORDER';

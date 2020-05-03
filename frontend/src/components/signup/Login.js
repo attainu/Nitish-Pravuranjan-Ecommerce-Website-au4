@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Card, Form, Container, Row, Button } from 'react-bootstrap';
 import { login } from '../../Redux/actions/auth';
 
-function Login({ login, isAuthenticated }) {
+function Login({ login, isAuthenticated, history }) {
   const [formData, setformData] = useState({
     email: '',
     password: '',
@@ -20,7 +19,7 @@ function Login({ login, isAuthenticated }) {
     login(email, password);
   };
   if (isAuthenticated) {
-    return <Redirect to='/cart' />;
+    history.goBack();
   }
   return (
     <Container fluid>

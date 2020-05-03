@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Card, Form, Container, Row, Button } from 'react-bootstrap';
 import { setAlert } from '../../Redux/actions/alert';
 import { register } from '../../Redux/actions/auth';
 
-function Signup({ setAlert, register, isAuthenticated }) {
+function Signup({ setAlert, register, isAuthenticated, history }) {
   const [formData, setformData] = useState({
     name: '',
     email: '',
@@ -29,7 +28,7 @@ function Signup({ setAlert, register, isAuthenticated }) {
   };
 
   if (isAuthenticated) {
-    return <Redirect to='/cart' />;
+    history.goBack();
   }
   return (
     <Container fluid>

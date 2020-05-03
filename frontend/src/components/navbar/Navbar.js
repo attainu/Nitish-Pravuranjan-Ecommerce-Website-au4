@@ -12,11 +12,11 @@ const Navbar = ({ onClick, logout, auth: { isAuthenticated, user } }) => {
     links = (
       <div className='nav-links'>
         <ul>
-          <Link to='/product'>
-            <li>Products</li>
-          </Link>
           <Link to='/cart'>
             <li>Cart</li>
+          </Link>
+          <Link to='/orders'>
+            <li>Orders</li>
           </Link>
         </ul>
         <div className='dropdown'>
@@ -35,11 +35,11 @@ const Navbar = ({ onClick, logout, auth: { isAuthenticated, user } }) => {
     links = (
       <div className='nav-links'>
         <ul>
-          <Link to='/product'>
-            <li>Products</li>
-          </Link>
           <Link to='/cart'>
             <li>Cart</li>
+          </Link>
+          <Link to='/orders'>
+            <li>Orders</li>
           </Link>
         </ul>
         <div className='dropdown'>
@@ -64,7 +64,7 @@ const Navbar = ({ onClick, logout, auth: { isAuthenticated, user } }) => {
           <DrawerToggleButton click={onClick} />
         </div>
         <div className='nav-bar-logo'>
-          <Link to='/'>LOGO</Link>
+          <Link to='/'>E-Store</Link>
         </div>
         <div className='spacing'></div>
         <div className='nav-bar-items'>{links}</div>
