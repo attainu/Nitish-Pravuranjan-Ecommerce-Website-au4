@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: SourceSansPro-Regular, sans-serif, Poppins;
+  background: #d3cce3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-repeat: repeat;
+  background-position: center;
+  position: relative;
+  background-size: cover;
+  z-index: 0;
+}
+
+/* ----------Loader---------- */
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ----------******---------- */
+
+/* -----Login and Signup----- */
+
+.inputfield-signup {
+  border-radius: 30px;
+  box-shadow: inset 4px 4px 4px #cbced1, inset -10px -10px 10px #ffffff;
+}
+
+.signup-card {
+  border-radius: 10px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.account-btn {
+  outline: none;
+  border: none;
+  width: 40%;
+  padding: 6px 6px 6px 6px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  text-align: center;
+  background: #ee0979; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff6a00,
+    #ee0979
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff6a00,
+    #ee0979
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  transition: 0.5s;
+  display: block;
+  margin: 0 auto;
+}
+.account-btn:hover {
+  background: #ff512f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #dd2476,
+    #ff512f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #dd2476,
+    #ff512f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.account-btn:active {
+  background: #ff512f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #dd2476,
+    #ff512f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #dd2476,
+    #ff512f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.account-route-text {
+  font-weight: 500;
+  text-decoration: none !important;
+  background: #396afc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2948ff,
+    #396afc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2948ff,
+    #396afc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.account-route-text:hover {
+  background: #ff512f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #dd2476,
+    #ff512f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #dd2476,
+    #ff512f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* ----------******---------- */
+
+/* --------Back Icon-------- */
+
+.backText {
+  text-decoration: none !important;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  color: black !important;
+}
+.backIcon {
+  font-size: 40px;
+}
+
+/* ---------******--------- */
+
+/* ------Add to Cart------ */
+
+.Add-cart-btn {
+  outline: none;
+  border: none;
+  width: 50%;
+  padding: 5px 5px 5px 5px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  text-align: center;
+  transition: 0.5s;
+  display: block;
+  margin: 0 auto;
+  background: #00b09b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #96c93d,
+    #00b09b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #96c93d,
+    #00b09b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+}
+.Add-cart-btn:hover {
+  background: #96c93d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #00b09b,
+    #96c93d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #00b09b,
+    #96c93d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.Add-cart-icon {
+  font-size: 25px;
+  margin-right: 0.5em;
+}
+.cart-icon:hover {
+  cursor: pointer;
+}
+/* ---------*****--------- */
