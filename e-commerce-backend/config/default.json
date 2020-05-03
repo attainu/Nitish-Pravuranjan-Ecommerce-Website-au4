@@ -1,4 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://nitishh21:admin@cluster0-ijhjr.mongodb.net/ecommerce?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken"
-}

@@ -51,6 +51,12 @@ class Cart extends Component {
             <div className='container-fluid'>
               <div className='row'>
                 <div className='col-lg-2 mx-auto col-md-6 col-10 mr-lg-0 text-center'>
+                  <button
+                    className='btn btn-outline-success'
+                    onClick={this.props.clearCart}
+                  >
+                    Clear cart
+                  </button>
                   <h3>Total: ${total}</h3>
                   <PaypalButton
                     total={total}
