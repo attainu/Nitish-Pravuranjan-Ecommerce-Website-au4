@@ -7,8 +7,8 @@ class CartItem extends Component {
   render() {
     const { _id, name, productPic, price, total, count } = this.props.item;
     return (
-      <div className='row my-1 text-capitalize text-center'>
-        <div className='col-10 mx-auto col-lg-2'>
+      <div className='row  my-1 text-capitalize text-center  p-5'>
+        <div className='col-10 mx-auto col-lg-2 '>
           <img
             src={productPic[0].img}
             style={{ width: '5rem', heigth: '5rem' }}
@@ -28,14 +28,14 @@ class CartItem extends Component {
           <div className='d-flex justify-content-center'>
             <div>
               <span
-                className='btn btn-outline-dark mx-1'
+                className='btn btn-outline-danger mx-1'
                 onClick={() => this.props.cartItemActions(_id, DECREMENT)}
               >
                 -
               </span>
               <span className='btn btn-black mx-1'>{count}</span>
               <span
-                className='btn  btn-outline-dark mx-1'
+                className='btn  btn-outline-success mx-1'
                 onClick={() => this.props.cartItemActions(_id, INCREMENT)}
               >
                 +

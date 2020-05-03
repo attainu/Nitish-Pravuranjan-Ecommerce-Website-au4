@@ -20,35 +20,35 @@ class Cart extends Component {
       <section>
         {this.props.cartItems.length > 0 && (
           <Fragment>
-            <div className='container-fluid text-center d-none d-lg-block'>
-              <div className='row '>
-                <div className='col-10 mx-auto col-lg-2'>
-                  <p className='text-uppercase'>products</p>
+            <div className='container text-center d-none d-lg-block'>
+              <div className='row pt-5'>
+                <div className='col-10 mx-auto col-lg-2 '>
+                  <p className=' badge badge-pill badge-secondary text-uppercase'>products</p>
                 </div>
                 <div className='col-10 mx-auto col-lg-2'>
-                  <p className='text-uppercase'>name of product</p>
+                  <p className=' badge badge-pill badge-secondary text-uppercase'>name of product</p>
                 </div>
                 <div className='col-10 mx-auto col-lg-2'>
-                  <p className='text-uppercase'>price</p>
+                  <p className=' badge badge-pill badge-secondary text-uppercase'>price</p>
                 </div>
                 <div className='col-10 mx-auto col-lg-2'>
-                  <p className='text-uppercase'>quantity</p>
+                  <p className=' badge badge-pill badge-info text-uppercase'>quantity</p>
                 </div>
                 <div className='col-10 mx-auto col-lg-2'>
-                  <p className='text-uppercase'>remove</p>
+                  <p className=' badge badge-pill badge-warning text-uppercase'>remove</p>
                 </div>
                 <div className='col-10 mx-auto col-lg-2'>
-                  <p className='text-uppercase'>total</p>
+                  <p className=' badge badge-pill badge-success text-uppercase'>total</p>
                 </div>
               </div>
             </div>
-            <div className='container-fluid'>
+            <div className='container product-list'>
               {this.props.cartItems &&
                 this.props.cartItems.map((item) => (
                   <CartItem key={item._id} item={item} />
                 ))}
             </div>
-            <div className='container-fluid'>
+            <div className='container pt-3'>
               <div className='row'>
                 <div className='col-lg-2 mx-auto col-md-6 col-10 mr-lg-0 text-center'>
                   <button

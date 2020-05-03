@@ -47,7 +47,6 @@ class Product extends Component {
 
 const ProductWrapper = styled.div`
   .card {
-    border-color: transparent;
     transition: all 1s linear;
     border-radius: 10px;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
