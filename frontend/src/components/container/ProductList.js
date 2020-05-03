@@ -7,7 +7,7 @@ class ProductList extends Component {
     return (
       <div className='container p-5'>
         <h3 className='text-center'>Our Products</h3>
-        <div className='row'>
+        <div className='row align-items-center'>
           {this.props.products &&
             this.props.products.map((product) => {
               return <Product key={product._id} product={product} />;

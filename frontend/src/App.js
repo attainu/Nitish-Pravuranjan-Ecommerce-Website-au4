@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react';
-import Signup from './components/signup/Signup.js';
-import Login from './components/signup/Login.js';
-import Navbar from './components/navbar/Navbar';
+import Signup from './components/Signup/Signup.js';
+import Login from './components/Signup/Login.js';
+import Navbar from './components/Navbar/Navbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import Alert from './components/Alert/Alert';

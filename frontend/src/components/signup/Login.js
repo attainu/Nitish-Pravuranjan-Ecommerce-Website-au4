@@ -64,7 +64,7 @@ function Login({ login, isAuthenticated, history }) {
               </Button>
             </Form>
             <Card.Text className='pt-4 text-center '>
-              <Link className='account-route-text' to='/Signup'>
+              <Link className='account-route-text' to='/signup'>
                 {' '}
                 Create an account
               </Link>

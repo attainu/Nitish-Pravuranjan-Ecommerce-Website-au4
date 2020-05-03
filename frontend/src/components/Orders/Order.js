@@ -10,7 +10,7 @@ class Order extends Component {
         <div className='container-fluid'>
           <div className='row justify-content-center'>
             <div className='col-auto'>
-              <div className='table table-striped table-responsive'>
+              <table className='table table-striped table-responsive'>
                 <thead className='text-center'>
                   <tr>
                     <th>OrderID</th>
@@ -22,7 +22,7 @@ class Order extends Component {
                 <tbody className='text-center'>
                   {this.props.orders.map((order) => {
                     return (
-                      <tr>
+                      <tr key={order._id}>
                         <td>{order._id}</td>
                         <td>{order.paymentID}</td>
                         <td>
@@ -40,7 +40,7 @@ class Order extends Component {
                     );
                   })}
                 </tbody>
-              </div>
+              </table>
             </div>
           </div>
         </div>

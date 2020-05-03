@@ -7,7 +7,7 @@ class CartItem extends Component {
   render() {
     const { _id, name, productPic, price, total, count } = this.props.item;
     return (
-      <div className='row  my-1 text-capitalize text-center  p-5'>
+      <div className='row my-1 text-capitalize text-center  p-4'>
         <div className='col-10 mx-auto col-lg-2 '>
           <img
             src={productPic[0].img}

@@ -6,7 +6,12 @@ import './Navbar.css';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import { DropdownButton, Dropdown } from 'react-bootstrap';
 
-const Navbar = ({ onClick, logout, auth: { isAuthenticated, user } }) => {
+const Navbar = ({
+  onClick,
+  logout,
+  auth: { isAuthenticated, user },
+  history,
+}) => {
   let links;
   if (!isAuthenticated) {
     links = (
@@ -48,9 +53,7 @@ const Navbar = ({ onClick, logout, auth: { isAuthenticated, user } }) => {
             id='dropdown-basic-button'
             title={user ? user.name : 'Welcome!'}
           >
-            <Dropdown.Item onClick={logout} href='/'>
-              Logout
-            </Dropdown.Item>
+            <Dropdown.Item onClick={logout}>Logout</Dropdown.Item>
           </DropdownButton>
         </div>
       </div>
