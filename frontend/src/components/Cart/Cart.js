@@ -20,8 +20,8 @@ class Cart extends Component {
       <section>
         {this.props.cartItems.length > 0 && (
           <Fragment>
-            <div className='container text-center d-none d-lg-block pt-5 '>
-              <div className='row cart-header p-3'>
+            <div className='container-fluid text-center d-none d-lg-block'>
+              <div className='row '>
                 <div className='col-10 mx-auto col-lg-2'>
                   <p className='text-uppercase'>products</p>
                 </div>
@@ -42,13 +42,13 @@ class Cart extends Component {
                 </div>
               </div>
             </div>
-            <div className='container  justify-content-center text-center mx-auto item-center cart-body p-5'>
+            <div className='container-fluid'>
               {this.props.cartItems &&
                 this.props.cartItems.map((item) => (
                   <CartItem key={item._id} item={item} />
                 ))}
             </div>
-            <div className='container text-center d-none d-lg-block pt-5 '>
+            <div className='container-fluid'>
               <div className='row'>
                 <div className='col-lg-2 mx-auto col-md-6 col-10 mr-lg-0 text-center'>
                   <h3>Total: ${total}</h3>
