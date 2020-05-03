@@ -31,8 +31,8 @@ function Signup({ setAlert, register, isAuthenticated, history }) {
     history.goBack();
   }
   return (
-    <Container fluid>
-      <Row className='mx-auto justify-content-center pt-5' xs>
+    <Container fluid >
+      <Row className='mx-auto justify-content-center pt-5 ' xs>
         <Card className='signup-card '>
           <Card.Body>
             <Card.Title className='text-center font-weight-bold'>
