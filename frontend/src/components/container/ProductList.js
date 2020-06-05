@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Product from './Product.js';
-
+import './ProductList.css';
 class ProductList extends Component {
   render() {
     return (
-      <div className='container p-5'>
+      <div className='product-list-container'>
         <h3 className='text-center'>Our Products</h3>
-        <div className='row'>
+        <div className='product-list align-items-center'>
           {this.props.products &&
             this.props.products.map((product) => {
               return <Product key={product._id} product={product} />;

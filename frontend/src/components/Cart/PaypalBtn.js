@@ -7,7 +7,6 @@ export default class MyApp extends React.Component {
       let cartItems = JSON.parse(localStorage.getItem('cartItems'));
       this.props.postOrder(cartItems, payment.paymentID, payment.paid);
       this.props.clearCart();
-      console.log('The payment was succeeded!', payment);
       // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
     };
 

@@ -93,7 +93,7 @@ function Signup({ setAlert, register, isAuthenticated, history }) {
               </Button>
             </Form>
             <Card.Text className='pt-3 text-center '>
-              <Link className='account-route-text' to='/Login'>
+              <Link className='account-route-text' to='/login'>
                 Existing User? login here
               </Link>
             </Card.Text>
