@@ -23,26 +23,38 @@ class Cart extends Component {
             <div className='container text-center d-none d-lg-block'>
               <div className='row pt-5'>
                 <div className='col-10 mx-auto col-lg-2 '>
-                  <p className=' badge badge-pill badge-secondary text-uppercase'>products</p>
+                  <p className=' badge badge-pill badge-secondary text-uppercase'>
+                    products
+                  </p>
                 </div>
                 <div className='col-10 mx-auto col-lg-2'>
-                  <p className=' badge badge-pill badge-secondary text-uppercase'>name of product</p>
+                  <p className=' badge badge-pill badge-secondary text-uppercase'>
+                    name of product
+                  </p>
                 </div>
                 <div className='col-10 mx-auto col-lg-2'>
-                  <p className=' badge badge-pill badge-secondary text-uppercase'>price</p>
+                  <p className=' badge badge-pill badge-secondary text-uppercase'>
+                    price
+                  </p>
                 </div>
                 <div className='col-10 mx-auto col-lg-2'>
-                  <p className=' badge badge-pill badge-info text-uppercase'>quantity</p>
+                  <p className=' badge badge-pill badge-info text-uppercase'>
+                    quantity
+                  </p>
                 </div>
                 <div className='col-10 mx-auto col-lg-2'>
-                  <p className=' badge badge-pill badge-warning text-uppercase'>remove</p>
+                  <p className=' badge badge-pill badge-warning text-uppercase'>
+                    remove
+                  </p>
                 </div>
                 <div className='col-10 mx-auto col-lg-2'>
-                  <p className=' badge badge-pill badge-success text-uppercase'>total</p>
+                  <p className=' badge badge-pill badge-success text-uppercase'>
+                    total
+                  </p>
                 </div>
               </div>
             </div>
-            <div className='container product-list'>
+            <div className='container cart-list'>
               {this.props.cartItems &&
                 this.props.cartItems.map((item) => (
                   <CartItem key={item._id} item={item} />
@@ -57,7 +69,7 @@ class Cart extends Component {
                   >
                     Clear cart
                   </button>
-                  <h3>Total: ${total}</h3>
+                  <h3 className='mt-2'>Total: ${total}</h3>
                   <PaypalButton
                     total={total}
                     clearCart={this.props.clearCart}

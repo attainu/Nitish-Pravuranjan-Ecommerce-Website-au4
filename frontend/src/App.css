@@ -5,8 +5,6 @@
 body,
 html {
   font-family: SourceSansPro-Regular, sans-serif, Poppins;
- 
- 
 
   background-repeat: repeat;
   background-position: center;
@@ -197,12 +195,11 @@ html {
 }
 /* ---------*****--------- */
 
-.product-list{
+.product-container {
+  height: 100%;
   border-radius: 28px;
-background: #ffffff;
-box-shadow:  26px -26px 100px #878787, 
-             -26px 26px 100px #ffffff;
+  background: #ffffff;
 }
 .cart-icon:hover {
-color: #ff512f;
+  color: #ff512f;
 }
